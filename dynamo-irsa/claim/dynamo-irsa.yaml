@@ -6,13 +6,13 @@ spec:
   writeConnectionSecretToRef:
     name: dynamo-irsa-test
   resourceConfig:
-    region: us-east-1
+    region: us-east-2
     tags:
       namespace: team-x
-      cluster: crossplane
+      cluster: crossplane-v5
   dynamoConfig:
     billingMode: PAY_PER_REQUEST
     attribute:
-      - name: UserID
+      - name: ID
         type: S
-    hashKey: UserID
+    hashKey: ID
